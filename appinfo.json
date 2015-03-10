@@ -1,0 +1,45 @@
+{
+  "uuid": "74460383-8a0f-4bb6-971f-8937c2ed4441",
+  "shortName": "PebbleJS Weather",
+  "longName": "PebbleJS Weather",
+  "companyName": "Pebble Technology",
+  "versionCode": 2,
+  "versionLabel": "2.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "WEATHER_CITY_KEY": 2,
+    "WEATHER_TEMPERATURE_KEY": 1,
+    "WEATHER_ICON_KEY": 0
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "png",
+        "name": "IMAGE_SUN",
+        "file": "img/sun.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_RAIN",
+        "file": "img/rain.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_CLOUD",
+        "file": "img/cloud.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_SNOW",
+        "file": "img/snow.png"
+      }
+    ]
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "sdkVersion": "3"
+}
