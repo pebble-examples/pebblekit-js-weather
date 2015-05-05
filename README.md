@@ -1,6 +1,7 @@
 # pebblekit-js-weather
 
-![screenshot](weather-screenshot.png)
+![screenshot](weather-screenshot~color.png)
+![screenshot](weather-screenshot~bw.png)
 
 This watchapp uses PebbleKit JS to fetch weather data from the 
 [openweathermap.org](http://openweathermap.org/) and display it on the watch. 
