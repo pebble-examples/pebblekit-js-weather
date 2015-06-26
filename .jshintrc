@@ -1,0 +1,21 @@
+{
+  "globals": { "Pebble" : true },
+  "browser": true,
+  "node": true,
+  "devel": true,
+  "freeze": true,
+  "evil": false,
+  "curly": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": "nofunc",
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "trailing": true,
+  "eqeqeq": true,
+  "quotmark": "single",
+  "eqeqeq": true,
+  "eqnull": true,
+  "plusplus": true
+}

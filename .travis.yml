@@ -1,0 +1,5 @@
+language: python
+python:
+  - "2.7"
+install: "wget https://s3.amazonaws.com/developer.getpebble.com/examples/install-script.sh && chmod +x install-script.sh && ./install-script.sh"
+script: "wget https://s3.amazonaws.com/developer.getpebble.com/examples/run-script.sh && chmod +x run-script.sh && ./run-script.sh"
