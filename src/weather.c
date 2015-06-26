@@ -17,10 +17,10 @@ enum WeatherKey {
 };
 
 static const uint32_t WEATHER_ICONS[] = {
-  RESOURCE_ID_IMAGE_SUN, //0
-  RESOURCE_ID_IMAGE_CLOUD, //1
-  RESOURCE_ID_IMAGE_RAIN, //2
-  RESOURCE_ID_IMAGE_SNOW //3
+  RESOURCE_ID_IMAGE_SUN, // 0
+  RESOURCE_ID_IMAGE_CLOUD, // 1
+  RESOURCE_ID_IMAGE_RAIN, // 2
+  RESOURCE_ID_IMAGE_SNOW // 3
 };
 
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
@@ -39,7 +39,7 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 #ifdef PBL_SDK_3
       bitmap_layer_set_compositing_mode(s_icon_layer, GCompOpSet);
 #endif
-      
+
       bitmap_layer_set_bitmap(s_icon_layer, s_icon_bitmap);
       break;
 
@@ -97,10 +97,9 @@ static void window_load(Window *window) {
     TupletCString(WEATHER_CITY_KEY, "St Pebblesburg"),
   };
 
-  app_sync_init(&s_sync, s_sync_buffer, sizeof(s_sync_buffer), 
+  app_sync_init(&s_sync, s_sync_buffer, sizeof(s_sync_buffer),
       initial_values, ARRAY_LENGTH(initial_values),
-      sync_tuple_changed_callback, sync_error_callback, NULL
-  );
+      sync_tuple_changed_callback, sync_error_callback, NULL);
 
   request_weather();
 }
