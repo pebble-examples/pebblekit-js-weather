@@ -10,3 +10,9 @@ This watchapp uses PebbleKit JS to fetch weather data from the
 It uses the location provided by the phone to look up the nearest location, and
 sends temperature data along with that location's name. A weather icon is also
 displayed.
+
+**Important**
+
+To obtain weather information, you must supply a value for `myAPIKey` in 
+`src/pebble-js-app.js`. These are freely available from
+[OpenWeatherMap.org](https://openweathermap.org/appid).
