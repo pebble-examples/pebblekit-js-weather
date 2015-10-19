@@ -1,3 +1,5 @@
+var myAPIKey = '';
+
 function iconFromWeatherId(weatherId) {
   if (weatherId < 600) {
     return 2;
@@ -13,7 +15,7 @@ function iconFromWeatherId(weatherId) {
 function fetchWeather(latitude, longitude) {
   var req = new XMLHttpRequest();
   req.open('GET', 'http://api.openweathermap.org/data/2.5/weather?' +
-    'lat=' + latitude + '&lon=' + longitude + '&cnt=1', true);
+    'lat=' + latitude + '&lon=' + longitude + '&cnt=1&appid=' + myAPIKey, true);
   req.onload = function () {
     if (req.readyState === 4) {
       if (req.status === 200) {
