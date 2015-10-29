@@ -54,10 +54,10 @@ function getWeather() {
   });
 }
 
-Pebble.addEventListener('ready', function (e) {
+Pebble.addEventListener('ready', function() {
   getWeather();
 });
 
-Pebble.addEventListener('appmessage', function (e) {
+Pebble.addEventListener('appmessage', function() {
   getWeather();
 });
