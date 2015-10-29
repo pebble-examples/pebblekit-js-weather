@@ -13,7 +13,7 @@ static uint8_t s_sync_buffer[64];
 typedef enum {
   WeatherKeyIcon = 0,
   WeatherKeyTemperature,
-  WeatherKeyCity,       
+  WeatherKeyCity,
 } WeatherKey;
 
 static const uint32_t WEATHER_ICONS[] = {
