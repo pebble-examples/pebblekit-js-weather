@@ -16,22 +16,22 @@
   "resources": {
     "media": [
       {
-        "type": "png",
+        "type": "bitmap",
         "name": "IMAGE_SUN",
         "file": "img/sun.png"
       },
       {
-        "type": "png",
+        "type": "bitmap",
         "name": "IMAGE_RAIN",
         "file": "img/rain.png"
       },
       {
-        "type": "png",
+        "type": "bitmap",
         "name": "IMAGE_CLOUD",
         "file": "img/cloud.png"
       },
       {
-        "type": "png",
+        "type": "bitmap",
         "name": "IMAGE_SNOW",
         "file": "img/snow.png"
       }
