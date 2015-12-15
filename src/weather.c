@@ -35,11 +35,7 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
       }
 
       s_icon_bitmap = gbitmap_create_with_resource(WEATHER_ICONS[new_tuple->value->uint8]);
-
-#ifdef PBL_SDK_3
       bitmap_layer_set_compositing_mode(s_icon_layer, GCompOpSet);
-#endif
-
       bitmap_layer_set_bitmap(s_icon_layer, s_icon_bitmap);
       break;
 
@@ -74,18 +70,18 @@ static void window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
-  s_icon_layer = bitmap_layer_create(GRect(32, 10, 80, 80));
+  s_icon_layer = bitmap_layer_create(GRect(0, 10, bounds.size.w, 80));
   layer_add_child(window_layer, bitmap_layer_get_layer(s_icon_layer));
 
   s_temperature_layer = text_layer_create(GRect(0, 90, bounds.size.w, 32));
-  text_layer_set_text_color(s_temperature_layer, COLOR_FALLBACK(GColorBlack, GColorWhite));
+  text_layer_set_text_color(s_temperature_layer, GColorWhite);
   text_layer_set_background_color(s_temperature_layer, GColorClear);
   text_layer_set_font(s_temperature_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   text_layer_set_text_alignment(s_temperature_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_temperature_layer));
 
   s_city_layer = text_layer_create(GRect(0, 122, bounds.size.w, 32));
-  text_layer_set_text_color(s_city_layer, COLOR_FALLBACK(GColorBlack, GColorWhite));
+  text_layer_set_text_color(s_city_layer, GColorWhite);
   text_layer_set_background_color(s_city_layer, GColorClear);
   text_layer_set_font(s_city_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   text_layer_set_text_alignment(s_city_layer, GTextAlignmentCenter);
@@ -116,12 +112,7 @@ static void window_unload(Window *window) {
 
 static void init(void) {
   s_main_window = window_create();
-  window_set_background_color(s_main_window, COLOR_FALLBACK(GColorIndigo, GColorBlack));
-
-#ifdef PBL_SDK_2
-  window_set_fullscreen(s_main_window, true);
-#endif
-
+  window_set_background_color(s_main_window, PBL_IF_COLOR_ELSE(GColorIndigo, GColorBlack));
   window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = window_load,
     .unload = window_unload
